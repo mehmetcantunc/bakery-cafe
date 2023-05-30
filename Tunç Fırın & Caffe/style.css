@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+ --red:#bd1b1b;
+ --orange:#FF7F00;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition:  .2s linear;
+
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    background:var(--orange);
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background:#bd1b1b;
+}
+
+html{
+    font-size: 62.5%;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-thumb{
+    background: rgb(235, 34, 119);
+}
+.section{
+    padding: 5rem 10%;
+    width: 5rem;
+ } 
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+   width: 100%;
+    padding: 1rem;
+    display: flex;
+    background: var(--orange);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1rem 2rem rgb(136,14,74)
+
+}
+
+.header .logo img{
+    width: 8rem;
+    height: 6rem;
+    margin-left: 10rem;
+    
+}
+
+ .header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    word-spacing: 2rem; 
+    font-family: 'Dancing Script', cursive !important; 
+}
+.header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3rem;
+    list-style: none;
+}
+.header .navbar ul li{
+    margin-left: 3rem;
+}
+ .header .navbar ul li a{
+    color:black;
+    align-items: center;
+    margin-right:5rem;
+}
+
+.header .navbar ul li a:hover{
+    color:darkmagenta;
+    cursor: pointer;
+    
+}
+
+.header #menu{
+    font-size: 2rem;
+   color: darkmagenta;
+   cursor: pointer;
+   display: flex;
+}
+
+/* home start */
+.home{
+    min-height: 100vh;
+    background:url("/images/unlumamuller.jpg") no-repeat;
+    /* background-position: center; */
+    -webkit-background-size:cover;
+      -moz-background-size:cover;
+     background-size: center;
+}
+ .home h1{ 
+    font-family: 'La Belle Aurore', cursive;
+   padding: 24rem;
+    font-size: 6rem;
+    text-shadow: .2rem .2rem ;
+    letter-spacing: 1px;
+    color:rgb(255, 60, 0);
+    text-align: center;
+    justify-content: center;
+    animation: bounce;
+    animation-duration: 2s;
+}
+.home p{
+    text-shadow: none;
+    line-height: 5rem;
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+}
+.home .btn{
+    display: fixed;
+    text-shadow: none;
+    right: 70rem;
+    width: 17rem;
+    padding: 1.5rem 1rem;
+    display:inline-block;
+    color: orangered;
+    justify-content: center; 
+    border-radius:12px 7px 12px 7px ;
+}
+.home .btn i{
+margin-left: .5rem;
+font-size: 1rem;
+text-align: center;
+animation: animate .5s ease infinite;
+transition: .5s ease;
+}
+@keyframes animate 
+{
+ 0%
+ {
+ transform: translateX(-5px);
+ }
+ 100%
+ {
+    transform: translateX(5px);
+ }
+}
+
+.home .btn span{
+    color: #fff;
+    font-weight: bolder;
+}
+
+/* home end */
+
+/* about start */
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about-content{
+    width: 100%;
+    height: auto;
+    padding: 4rem 2rem;
+    box-shadow: 0 .2rem .5rem rgb(255, 60, 0);
+    text-align: center;
+    background: orangered;
+    border-radius: 1rem;
+}
+.about-content h2{
+    font-size: 3rem;
+    color:black;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-shadow:.2rem .2rem yellow;
+}
+.about-content p{
+    font-size: 2rem;
+    color: #fff;
+}
+.about-content .btn{
+color: blue;
+background-color: #fff;
+border-radius: 12px 6px 12px 6px;
+}
+.about-content .btn i{
+    margin-left: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    animation: sanimate .5s ease infinite;
+    transition: .5s ease;
+    }
+    @keyframes sanimate
+    {
+    0%
+    {
+        transform: translateX(-5px);
+    }
+    100%
+    {
+        transform: translateX(5px);
+    }
+
+    }
+
+.about-content .btn:hover{
+    border-radius: 30px 10px 45px 6px;
+    cursor: pointer;
+    background-color: red;
+}
+.about .images img{
+    width: 100%;
+    height: auto;
+}
+.about .images img:hover
+{
+    animation: animate-img .99s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes animate-img 
+{
+0%,100%
+{
+    transform: translateX(-3rem);
+}
+25%
+{
+    transform: translateY(4rem);
+}
+50%
+{
+    transform: translateX(3rem);
+}
+75%
+{
+    transform: translateY(-4rem);
+}
+}
+/* about end */
+
+/* product start */
+.title{
+text-align: center;
+font-size: 3rem;
+padding: .5rem;
+color: rgb(236, 35, 119);
+}
+.title span{
+color: limegreen;
+}
+.cake-product .inner-cake-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cake-product .inner-cake-col{
+    max-width: 1300px;
+    background: #fff;
+    height: 27rem;
+    flex: 1 1 20rem;
+    padding: 1 2rem;
+    margin: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .6rem rgb(235, 34, 119);
+    text-align: center;
+}
+.cake-product .inner-cake-col:hover{
+    transform: translateY(-.5rem);
+    transition: .5s ease;
+}
+.cake-product .inner-cake-col img{
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
+.cake-product .inner-cake-col .cake-price p{
+    position:absolute;
+    width: 2.7rem;
+    height: auto;
+    margin-top: -1.2rem;
+    margin-left: 9rem;
+    padding: .8rem .1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5rem;
+    background: lightgray;
+    color: #000;
+}
+.cake-star{
+    color: yellow;
+    position: relative;
+    margin-top: 1.8rem;
+}
+.cake-product .inner-cake-col h2{
+    padding: .5rem 0;
+    color: blue;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+}
+.cake-product .inner-cake-col h3{
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.cake-product .inner-cake-col p{
+    color: gray;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem 0;
+}
+/* product end */
+
+/* services start */
+.service .cake-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+    border-top: .2rem dotted limegreen;
+    border-bottom: .2rem dotted limegreen ;
+}
+.service .cake-list .btn1{
+    width: 150px;
+    padding: .6rem;
+    border-radius: .2rem;
+    border: none;
+    background: rgb(235, 34, 119);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    margin: 1rem;
+    text-align: center;
+}
+.service .cake-list .btn1.active,
+.service .cake-list .btn1:hover{
+    background: #FF7F00;
+    transition:  .5s ease;
+}
+
+.service .cake-row{
+    display: flex;
+     align-items: center;
+     justify-content:center;
+     flex-wrap: wrap;
+}
+.service  .cake-row .image img{
+    border-radius: 3rem;
+    max-width:100%;
+    height: 20rem;
+     object-fit: cover; 
+}
+.service .cake-content .cake-info{
+    padding: 1rem 4rem;
+
+}
+.service .cake-content .cake-info h3{
+    padding: 1rem 1rem 0 0;
+    font-size: 2.5rem;
+    color: limegreen;
+}
+.service .cake-content .cake-info a{
+    font-size: 1rem;
+    font-weight: 600;
+    color: blue;
+    cursor: pointer;
+}
+
+.service .cake-content .cake-info a:hover{
+    text-decoration: underline;
+    letter-spacing: 1rem;
+}
+/* services end */
+
+/* contact start */
+.contact{
+    padding-top: 8.5rem;
+}
+
+.cake-contact{
+width: 100%;
+background: whitesmoke;
+}
+.cake-contact-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cake-contact-col{
+    margin: 2rem;
+    flex: 1 1 20rem;
+    text-align: center;
+}
+
+.contact-col .imgs{
+    border: 1px solid #fff;
+}
+.contact-col .imgs{
+    
+    width: 100%;
+    height:25rem;
+    margin: 1.5rem;
+    padding: 1rem;
+    flex: 1 1 20rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+}
+
+.contact-col h1{
+    padding: 1rem 0;
+    color: rgb(255, 60, 0);
+    letter-spacing: .1rem;
+}
+.cake-contact-col .social i{
+    padding: .8rem;
+    border: none;
+    border-radius: 1rem;
+    background: rgb(235, 34, 119);
+    color: #fff;
+    font-size: 1.5rem;
+}
+.cake-contact-col .social i:hover{
+    background: limegreen;
+    color: #fff;
+    transition: .5s ease;
+}
+
+.cake-contact-col p{
+
+    padding: .5rem 0;
+    line-height: 1.5rem;
+    color:blue;
+}
+
+.cake-contact-col input,
+.cake-contact-col textarea{
+    display: flex;
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-bottom: .1rem dotted rgb(235, 34, 119);
+}
+.cake-contact-col textarea{
+    resize: none;
+}
+.copyright{
+    margin-top: 5rem;
+    padding: 3rem;
+    text-align: center;
+    background: #FF7F00;
+}
+.copyright i{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.copyright p{
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* contact end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobil uyumlu responsive başlangıç */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+}
+@media (max-width:768px){
+    #menu{
+        display: block;
+    }
+    .header .navbar{
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        background:var(--orange);
+        transform: scaley(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    header .navbar.nav-toggle{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .fa-times{
+        transition: .5s ease;
+        transform: rotate(540deg);
+    }
+   
+    header .navbar ul{
+        padding: 1rem;
+        flex-flow: column;
+    }
+    header .navbar ul li{
+        margin: 1rem;
+        width: 100%;
+    }
+    header .navbar ul li a{
+        display: block;
+        color: black;
+        padding-left: 2rem;
+        border-right: .1rem solid black;
+        font-size: 1.5rem;
+    }
+    .home h1{
+        font-size: 3rem;
+        padding-top: 50%;
+    }
+    .home p{
+        font-size: 1.2rem;
+    
+    }
+    .about{
+        display: blok;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .service .cake-list .btn1{
+        display: inline-block;
+        margin: .2rem;
+        font-size: .6rem;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .home .slides-container .slide h3{
+        font-size: 2rem;
+        color:red;
+    }
+    .home .slides-container .slide .content span{
+        
+        font-size: 2rem;
+        color:black;
+    }
+}
+
+/* mobil uyumlu responsive bitiş */
